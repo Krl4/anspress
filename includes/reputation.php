@@ -606,7 +606,7 @@ function ap_reputation_get_info($event, $action_id) {
 			break;
 
 		case 'voted_down':
-			$info = sprintf( __( '%sDown voted %s','ap' ), '<span class="ap-reputation-event">', '</span>'.get_post_type( $action_id ) );
+			$info = sprintf( __( '%sDown voted %s %s','ap' ), '<span class="ap-reputation-event">', '</span>'.get_post_type( $action_id ), '<a href="'.get_permalink( $action_id ).'">'.get_the_title( $action_id ).'</a>' );
 			break;
 
 		case 'best_answer':
